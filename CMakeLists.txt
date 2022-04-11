@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.7.1)
+project(TMscore_py)
+find_package(PythonExtensions REQUIRED)
+set(CMAKE_CXX_FLAGS "-O3 -ffast-math -lm")
+set(src "TMscore_py")
+set(tmscore_src "TMscore_py/TMscore.cpp")
+add_executable(TMscore ${tmscore_src})
+install (TARGETS TMscore RUNTIME DESTINATION TMscore_py)
