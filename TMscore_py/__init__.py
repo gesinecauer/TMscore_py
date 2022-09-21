@@ -206,6 +206,10 @@ class TMscore():
 
     def __call__(self, structX, structY, check_mirror=True, args=None,
                  parse_kabsch=True, verbose=False):
+
+        # In TM-score, structY is regarded as native structure, meaning they
+        # superpose structX onto structY.
+
         self._output = self._run_TMscore(
             [structX, structY], check_mirror=check_mirror,
             args=args)
