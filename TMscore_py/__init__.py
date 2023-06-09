@@ -189,7 +189,8 @@ class TMscore():
 
         if not isinstance(structures[i], (str, np.ndarray)):
             raise ValueError(
-                f"Argument for struct{i} not recognized:\n{structures[i]}")
+                f"Argument for struct{i} not recognized (type="
+                f"{type(structures[i])}):\n{structures[i]}")
         if isinstance(structures[i], str):
             structures[i] = str(pathlib.Path(structures[i]).resolve())
             if not os.path.isfile(structures[i]):
