@@ -47,3 +47,4 @@ CMake Error at CMakeLists.txt:3 (find_package):
 ```
 
 
+TODO: [migrate from scikit-build to scikit-build-core](https://scikit-build-core.readthedocs.io/en/latest/migration_guide.html)
