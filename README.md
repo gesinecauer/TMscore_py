@@ -4,6 +4,14 @@ A simple class to wrap the original TMscore C++ code.
 The source code for TMscore (required) can be found here: https://zhanglab.ccmb.med.umich.edu/TM-score/
 It is also available in this repository.
 
+## Installation
+
+Install via
+
+```
+pip install -e git+https://github.com/gesinecauer/TMscore_py
+```
+
 ## Usage
 
 ``` Python
@@ -17,14 +25,7 @@ print(tmscore(structX, structY))  # file paths or numpy arrays
 ## License
 See LICENSE. For more info on TMscore see https://zhanglab.ccmb.med.umich.edu/TM-score/
 
-
-## A note about installation
-
-Install via
-
-```
-python setup.py develop
-```
+## Installation errors
 
 If you run into the following error upon reinstall, remove the `_skbuild/` directory (see [here](https://github.com/equinor/ert/issues/2408) for details.)
 
