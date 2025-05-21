@@ -1,8 +1,11 @@
-cmake_minimum_required(VERSION 3.7.1)
-project(TMscore_py)
-find_package(PythonExtensions REQUIRED)
-set(CMAKE_CXX_FLAGS "-O3 -ffast-math -lm")
-set(src "TMscore_py")
+cmake_minimum_required(VERSION 3.15...3.30)
+project(${SKBUILD_PROJECT_NAME} LANGUAGES CXX)
+
+find_package(Python COMPONENTS Interpreter Development.Module REQUIRED)
+
+# Create executable file, not library
+#Python_add_library(TMscore MODULE TMscore_py/TMscore.cpp WITH_SOABI)
 set(tmscore_src "TMscore_py/TMscore.cpp")
 add_executable(TMscore ${tmscore_src})
-install (TARGETS TMscore RUNTIME DESTINATION TMscore_py)
+
+install(TARGETS TMscore DESTINATION ${SKBUILD_PROJECT_NAME})
